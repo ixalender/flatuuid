@@ -5,8 +5,6 @@ Makes old kind UUIDs more compact.
 ## Why?!
 Because I use UUID as a part of models and URLs in my APIs. But I don't like generated unique string which contains unuseful data like "-".
 
-Also, I'm tired of copying from project to project the code for removing these pieces of string.
-
 ## Install
 ```
 go get github.com/ixalender/flatuuid
