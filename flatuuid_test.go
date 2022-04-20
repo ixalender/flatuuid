@@ -37,4 +37,14 @@ func Test_Compact(t *testing.T) {
 	expectedUUIDLower := strings.ToLower(strings.Trim(strings.ReplaceAll(microsoftGUIDUpper, "-", ""), "{}"))
 	assert.Nil(t, err)
 	assert.Equal(t, expectedUUIDLower, flatUUID)
+
+	flattenUUID := "78b8332284f646e8a0be238fb5703a09"
+	flatUUID, err = flatuuid.Compact(flattenUUID)
+	assert.Nil(t, err)
+	assert.Equal(t, flattenUUID, flatUUID)
+
+	flattenUpperUUID := "78B8332284F646E8A0BE238FB5703A09"
+	flatUUID, err = flatuuid.Compact(flattenUpperUUID)
+	assert.Nil(t, err)
+	assert.Equal(t, strings.ToLower(flattenUpperUUID), flatUUID)
 }
