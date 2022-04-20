@@ -1,9 +1,10 @@
 package flatuuid_test
 
 import (
-	"flatuuid"
 	"strings"
 	"testing"
+
+	"github.com/ixalender/flatuuid"
 
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/assert"

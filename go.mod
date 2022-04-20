@@ -1,4 +1,4 @@
-module flatuuid
+module github.com/ixalender/flatuuid
 
 go 1.17
 
